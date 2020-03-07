@@ -27,19 +27,16 @@ object ProductUtil {
   }
 
   def writeProductToFile(productData: List[Product]): Unit = {
-
     productData.foreach(data => {
       val writer = new BufferedWriter(new FileWriter(new File("./src/main/resources/productData.txt")
         , true))
       writer.write("\n" + data.toString)
       writer.close()
     })
-
   }
 
   def getProductJsonDataFromObj(product: Product): String = {
     implicit val formats: DefaultFormats.type = DefaultFormats
     write(product)
   }
-
 }

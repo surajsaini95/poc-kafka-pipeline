@@ -30,7 +30,6 @@ class ProductProducer {
 
   }
 }
-
 object EmployeeProducerOb extends App {
   val employeeProducer = new ProductProducer
   employeeProducer.writeProductToKafkaTopic("product-launch")

@@ -24,12 +24,9 @@ class ProductConsumer {
     val timeOut = 1000
     for (data <- trainee.poll(timeOut).asScala.iterator)
       println(data.value)
-
     trainee.close()
   }
-
 }
-
 object ProductConsumerOb extends App {
   val productConsumer = new ProductConsumer
   productConsumer.readProductFromKafkaTopic("product-launch")
