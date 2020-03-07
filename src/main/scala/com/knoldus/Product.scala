@@ -1,3 +1,3 @@
 package com.knoldus
 
-case class Product1(productId: String, productName: String, productBrand: String)
+case class Product(productId: String, productName: String, productBrand: String)
